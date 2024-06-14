@@ -12,15 +12,15 @@ export default function HeroSection() {
                         Developer
                     </h1>
                     <p className="hero-section-description">
-                        Aš myliu Vaidą.
+                        this is description
                         <br/>
-                        Ir visada mylėsiu.
+                        react & .net 
                     </p>
                 </div>
                 <button className="btn btn-primary">Get In Touch</button>
             </div>
             <div className="hero-section-img">
-                <img src="./img/hero_img.png" style={{maxHeight:300}} alt="Hero Section"/>
+                <img className="hero-image" src="./img/hero_img.png" alt="Hero Section"/>
             </div>
         </section>
     );
