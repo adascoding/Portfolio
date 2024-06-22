@@ -1,0 +1,65 @@
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+
+export default function ContactMe() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Form submitted!"); // Replace with actual form submission logic
+  };
+
+  return (
+    <section id="contact">
+      <div className="contact-container">
+        <h2>Get In Touch</h2>
+        <h3>Contact Me</h3>
+        <p>
+          Thank you for visiting my website. If you have any questions or would
+          like to discuss a project, please feel free to reach out to me via
+          the following contact details or by filling out the form below.
+        </p>
+        <div className="contact-details">
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faEnvelope} className="icon" />
+            <p>adas.alvikas@gmail.com</p>
+          </div>
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faPhone} className="icon" />
+            <p>+44 7493 707 378</p>
+          </div>
+        </div>
+
+        <form onSubmit={handleSubmit} className="contact-form">
+          <div className="form-group">
+            <label htmlFor="name">Your Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Your Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="phone">Your Phone Number</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" className="submit-button">
+            Submit
+          </button>
+        </form>
+
+        <p className="contact-disclaimer">
+          Please note that by submitting this form, you consent to us processing
+          your information in accordance with our privacy policy.
+        </p>
+      </div>
+    </section>
+  );
+}
