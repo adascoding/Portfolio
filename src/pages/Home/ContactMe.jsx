@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import emailjs from "emailjs-com";
 
 export default function ContactMe() {
+  const formRef = useRef();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Form submitted!"); // Replace with actual form submission logic
+
+    emailjs
+      .sendForm(
+        "", // Replace with your EmailJS service ID
+        "", // Replace with your EmailJS template ID
+        formRef.current,
+        "" // Replace with your EmailJS public API key
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          alert("Failed to send message, please try again later.");
+        }
+      );
+    e.target.reset();
   };
 
   return (
@@ -14,22 +33,22 @@ export default function ContactMe() {
         <h2>Get In Touch</h2>
         <h3>Contact Me</h3>
         <p>
-          Thank you for visiting my website. If you have any questions or would
+          Thank you for visiting my portfolio. If you have any questions or would
           like to discuss a project, please feel free to reach out to me via
           the following contact details or by filling out the form below.
         </p>
         <div className="contact-details">
           <div className="contact-item">
             <FontAwesomeIcon icon={faEnvelope} className="icon" />
-            <p>adas.alvikas@gmail.com</p>
+            <span className="p1">adas.alvikas@gmail.com</span>
           </div>
           <div className="contact-item">
             <FontAwesomeIcon icon={faPhone} className="icon" />
-            <p>+44 7493 707 378</p>
+            <span className="p1">+44 7493 707 378</span>
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="contact-form">
+        <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
             <label htmlFor="name">Your Name</label>
             <input type="text" id="name" name="name" required />
@@ -50,7 +69,7 @@ export default function ContactMe() {
             <label htmlFor="message">Your Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
-          <button type="submit" className="submit-button">
+          <button disabled type="submit" className="submit-button">
             Submit
           </button>
         </form>

@@ -3,7 +3,7 @@ import { Link as ScrollLink, Events } from "react-scroll";
 
 export default function Navbar() {
   const [navActive, setNavActive] = useState(false);
-  const [activeSection, setActiveSection] = useState("home"); // Initialize active section state
+  const [activeSection, setActiveSection] = useState("home");
 
   const toggleNav = () => {
     setNavActive((prev) => !prev);
@@ -26,7 +26,6 @@ export default function Navbar() {
     const portfolioSection = document.getElementById("portfolio").offsetTop;
     const contactSection = document.getElementById("contact").offsetTop;
 
-    // Adjust these conditions based on your layout and offset requirements
     if (
       scrollPosition >= heroSection &&
       scrollPosition < aboutSection - 70
@@ -70,13 +69,11 @@ export default function Navbar() {
       closeMenu();
     }
 
-    // Register scroll events
     window.addEventListener("scroll", handleScroll);
     Events.scrollEvent.register("begin", () => {});
     Events.scrollEvent.register("end", () => {});
 
     return () => {
-      // Clean up scroll events
       window.removeEventListener("scroll", handleScroll);
       Events.scrollEvent.remove("begin");
       Events.scrollEvent.remove("end");
@@ -117,7 +114,7 @@ export default function Navbar() {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-70} // Adjust offset as needed
+                offset={-70}
                 duration={500}
                 activeClass="active-link"
                 onSetActive={() => handleSetActive("about")}
@@ -131,7 +128,7 @@ export default function Navbar() {
                 to="skills"
                 spy={true}
                 smooth={true}
-                offset={-70} // Adjust offset as needed
+                offset={-70}
                 duration={500}
                 activeClass="active-link"
                 onSetActive={() => handleSetActive("skills")}
@@ -145,7 +142,7 @@ export default function Navbar() {
                 to="portfolio"
                 spy={true}
                 smooth={true}
-                offset={-70} // Adjust offset as needed
+                offset={-70}
                 duration={500}
                 activeClass="active-link"
                 onSetActive={() => handleSetActive("portfolio")}
@@ -159,7 +156,7 @@ export default function Navbar() {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={-70} // Adjust offset as needed
+                offset={-70}
                 duration={500}
                 activeClass="active-link"
                 onSetActive={() => handleSetActive("contact")}

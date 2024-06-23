@@ -1,3 +1,7 @@
+import { Link as ScrollLink } from "react-scroll";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
+
 export default function HeroSection() {
     return (
         <section id="hero" className="hero-section">
@@ -12,7 +16,21 @@ export default function HeroSection() {
                     <p className="hero-description">
                         Eager to apply skills in C#, React.js, .NET Core, and SQL Server to contribute effectively as a Junior Developer. Passionate about continuous learning and growth in software development, seeking opportunities to leverage technical expertise in a collaborative team environment.
                     </p>
-                    <button className="hero-button">Contact me</button>
+                    
+                    <ScrollLink 
+                        to="contact" 
+                        spy={true} 
+                        smooth={true} 
+                        offset={-70} 
+                        duration={500} 
+                        className="hero-button" 
+                    >
+                        Contact me
+                    </ScrollLink>
+                    <a href="../Adas-CV.pdf" className="cv-download" download>
+                        <FontAwesomeIcon icon={faDownload} /> Download CV
+                    </a>
+
                 </div>
                 <div className="hero-image">
                     <img src="./img/hero_img.jpg" alt="Adas" />
