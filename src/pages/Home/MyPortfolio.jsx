@@ -3,7 +3,7 @@ export default function MyPortfolio() {
         <section id="portfolio">
             <span className="section-sub-heading">Recent projects</span><br/>
             <span className="section-heading">Portfolio</span>
-
+            soon to come
            
         </section>
     );
