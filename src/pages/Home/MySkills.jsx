@@ -5,7 +5,8 @@ import { faDesktop, faServer, faTools, faCode } from '@fortawesome/free-solid-sv
 export default function MySkills() {
     return (
         <section id="skills">
-            <h2 className="skills-heading">My Skills</h2>
+            <span className="section-sub-heading">Technological Expertise and Tools</span><br/>
+            <span className="section-heading">My Skills</span>
             <div className="skills-container">
                 <div className="skills-card">
                     <div className="skills-title">

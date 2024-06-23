@@ -1,7 +1,8 @@
 export default function AboutMe() {
     return (
         <section id="about" className="about-me">
-            <h1>About Me</h1>
+            <span className="section-sub-heading">A Brief Introduction</span><br />
+            <span className="section-heading">About Me</span>
             <p>
                 I am a passionate and dedicated web developer with a strong foundation in frontend and backend development. My journey into the world of programming began with a curiosity for building websites and has evolved into a full-fledged career.
             </p>

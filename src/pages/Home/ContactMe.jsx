@@ -30,8 +30,8 @@ export default function ContactMe() {
   return (
     <section id="contact">
       <div className="contact-container">
-        <h2>Get In Touch</h2>
-        <h3>Contact Me</h3>
+        <h3 className="section-sub-heading">Get In Touch</h3>
+        <h2 className="section-heading">Contact Me</h2>
         <p>
           Thank you for visiting my portfolio. If you have any questions or would
           like to discuss a project, please feel free to reach out to me via
