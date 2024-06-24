@@ -7,7 +7,6 @@ const MyPortfolio = () => {
       <span className="section-heading">Portfolio</span>
       <div className="portfolio-container">
 
-        {/* Portfolio Website Card */}
         <div className="portfolio-card">
           <div className="portfolio-img-container">
             <img src="../img/project1.png" className="portfolio-img" alt="Portfolio Website" />
@@ -29,7 +28,6 @@ const MyPortfolio = () => {
           </div>
         </div>
 
-        {/* Movie App Card */}
         <div className="portfolio-card">
           <div className="portfolio-img-container">
             <img src="../img/project2.png" className="portfolio-img" alt="Movie App" />
@@ -52,7 +50,6 @@ const MyPortfolio = () => {
           </div>
         </div>
 
-        {/* Clothing eCommerce Store Card */}
         <div className="portfolio-card">
           <div className="portfolio-img-container">
             <img src="../img/project3.png" className="portfolio-img" alt="Clothing eCommerce Store" />
