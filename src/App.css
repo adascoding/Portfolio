@@ -4,21 +4,18 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
-
 .section-heading {
   font-size: 26px;
   font-weight: bold;
   margin-left: 20px;
   color: #232323;
 }
-
 .section-sub-heading {
   font-size: 16px;
   font-weight: bold;
   margin-left: 20px;
   color: #232323;
 }
-
 /* Hero Section */
 #hero {
   background-color: #f5fcff;
@@ -76,7 +73,6 @@ body {
   color: #5e3bee;
   background-color: white;
 }
-
 .cv-download {
   background-color: white;
   color: #4a2cc2;
@@ -155,7 +151,7 @@ body {
 
 /* Hamburger Menu */
 .hamburger {
-  display: none;
+  display: none; /* Initially hidden */
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
@@ -163,7 +159,7 @@ body {
   cursor: pointer;
   background: transparent;
   border: none;
-  z-index: 200;
+  z-index: 200; /* Ensure the hamburger is above other elements */
 }
 
 .hamburger-line {
@@ -191,7 +187,7 @@ body {
 }
 
 .navbar-items.active {
-  display: block;
+  display: block; /* Display block when active */
   position: absolute;
   top: 60px;
   left: 0;
@@ -202,19 +198,52 @@ body {
 }
 
 .navbar-items.active ul {
-  flex-direction: column;
+  flex-direction: column; /* Stack items vertically when active */
   align-items: center;
 }
-
 .navbar-items ul li a.active-link {
-  color: #5e3bee;
+  color: #5e3bee; 
 }
 
+/* Media Queries */
+@media (max-width: 1024px) {
+  .hero-image img {
+      max-width: 250px;
+  }
+
+  .hero-title {
+      font-size: 30px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .hero-image {
+      display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-items {
+      display: none; /* Hide the menu items initially */
+  }
+
+  .hamburger {
+      display: flex; /* Show the hamburger on smaller screens */
+  }
+
+  .navbar-items.active {
+      display: flex; 
+      flex-direction: column;
+  }
+  .navbar-items ul li {
+    padding: 5px;
+  }
+}
 /* Contact Section */
 #contact {
   padding-top: 16px;
 }
-
 .contact-container {
   max-width: 800px;
   margin: 0 auto;
@@ -291,13 +320,21 @@ p1 {
   border-radius: 5px;
   cursor: not-allowed;
   transition: background-color 0.3s ease;
+  
 }
 
 .submit-button:hover {
   background-color: #4a2cc2;
 }
 
-/* Skills Section */
+.contact-disclaimer {
+  margin-top: 20px;
+  color: #888;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Skills section */
 #skills {
   padding: 20px 0;
 }
@@ -315,51 +352,51 @@ p1 {
   min-width: 250px;
   margin: 6px;
   width: calc(25% - 12px);
-  color: #333;
+  color:#333;
 }
 
 .skills-card:hover {
   border-bottom: 4px solid #5e3bee;
 }
 
+
+
 .skills-title {
   font-size: 20px;
   margin-bottom: 8px;
   padding: 20px;
-  color: #333;
+  color:#333;
 }
 
 .skills-description {
-  color: #333;
+  color:#333;
 }
 
 @media (max-width: 1200px) {
   .skills-card {
-    flex: 1 1 calc(50% - 12px);
+    flex: 1 1 calc(50% - 12px); /* 50% width for 2 columns on screens <= 1200px */
     max-width: 500px;
   }
 }
 
 @media (max-width: 768px) {
   .skills-card {
-    width: calc(50% - 12px);
+    width: calc(50% - 12px); /* 2 columns on screens <= 768px */
   }
 }
 
 @media (max-width: 480px) {
   .skills-card {
-    width: calc(100% - 12px);
+    width: calc(100% - 12px); /* 1 column on screens <= 480px */
   }
 }
-
 .icon {
-  color: #5e3bee;
+  color: #5e3bee; /* Set the color for the icons */
 }
 
 #about {
   margin-top: 20px;
 }
-
 .about-me {
   display: flex;
   flex-direction: column;
@@ -377,12 +414,12 @@ p1 {
   padding: 20px;
   margin: 20px;
 }
-
 /* Portfolio Section */
 #portfolio {
   margin-top: 20px;
 }
 
+/* Portfolio Container */
 .portfolio-container {
   display: flex;
   justify-content: space-around;
@@ -391,8 +428,9 @@ p1 {
   padding: 10px;
 }
 
+/* Portfolio Card */
 .portfolio-card {
-  flex: 1 1 calc(33.333% - 40px);
+  flex: 1 1 calc(33.333% - 40px); /* Three cards per row with spacing */
   max-width: 440px;
   border: 1px solid black;
   overflow: hidden;
@@ -401,18 +439,24 @@ p1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Image Container */
 .portfolio-img-container {
   max-height: 400px;
   overflow: hidden;
+  
 }
 
+/* Portfolio Image */
+/* Portfolio Image */
 .portfolio-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  width: 100%;                /* Make the image fill the container width */
+  height: auto;               /* Maintain the aspect ratio */
+  display: block;             /* Ensure the image behaves like a block element */
+  object-fit: cover;          /* Cover the entire container without distortion */
 }
 
+
+/* Portfolio Description */
 .portfolio-description {
   padding: 16px;
   display: flex;
@@ -420,6 +464,7 @@ p1 {
   gap: 8px;
 }
 
+/* Portfolio Heading */
 .portfolio-heading {
   font-size: 18px;
   font-weight: bold;
@@ -427,11 +472,13 @@ p1 {
   margin: 0;
 }
 
+/* Portfolio Tech Stack */
 .portfolio-tech-stack {
   font-size: 14px;
   color: #777;
 }
 
+/* GitHub Button */
 .github-button {
   font-size: 14px;
   color: #006b6a;
@@ -443,12 +490,12 @@ p1 {
   align-self: flex-start;
   cursor: pointer;
 }
-.github-button:hover {
-  border:0;
-}
 
+
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .portfolio-card {
-    flex: 1 1 100%;
+    flex: 1 1 100%; /* Single card per row on small screens */
   }
 }
