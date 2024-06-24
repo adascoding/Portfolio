@@ -18,33 +18,30 @@ export default function Navbar() {
   };
 
   const handleScroll = () => {
-    // Detect which section is currently in view based on scroll position
     const scrollPosition = window.scrollY;
+    console.log("Scroll Position:", scrollPosition);
+
     const heroSection = document.getElementById("hero").offsetTop;
     const aboutSection = document.getElementById("about").offsetTop;
     const skillsSection = document.getElementById("skills").offsetTop;
     const portfolioSection = document.getElementById("portfolio").offsetTop;
     const contactSection = document.getElementById("contact").offsetTop;
 
-    if (
-      scrollPosition >= heroSection &&
-      scrollPosition < aboutSection - 70
-    ) {
+    console.log("Section Positions:", {
+      heroSection,
+      aboutSection,
+      skillsSection,
+      portfolioSection,
+      contactSection
+    });
+
+    if (scrollPosition >= heroSection && scrollPosition < aboutSection - 70) {
       setActiveSection("hero");
-    } else if (
-      scrollPosition >= aboutSection - 70 &&
-      scrollPosition < skillsSection - 70
-    ) {
+    } else if (scrollPosition >= aboutSection - 70 && scrollPosition < skillsSection - 70) {
       setActiveSection("about");
-    } else if (
-      scrollPosition >= skillsSection - 70 &&
-      scrollPosition < portfolioSection - 70
-    ) {
+    } else if (scrollPosition >= skillsSection - 70 && scrollPosition < portfolioSection - 70) {
       setActiveSection("skills");
-    } else if (
-      scrollPosition >= portfolioSection - 70 &&
-      scrollPosition < contactSection - 70
-    ) {
+    } else if (scrollPosition >= portfolioSection - 70 && scrollPosition < contactSection - 70) {
       setActiveSection("portfolio");
     } else if (scrollPosition >= contactSection - 70) {
       setActiveSection("contact");
