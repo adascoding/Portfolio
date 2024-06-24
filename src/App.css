@@ -5,7 +5,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 section {
-  padding-top: 30px;
+  padding-top: 25px;
 }
 .section-heading {
   font-size: 26px;
@@ -336,7 +336,7 @@ p1 {
 
 /* Skills section */
 #skills {
-  padding-top: 25px;
+
 }
 
 .skills-container {
