@@ -336,7 +336,7 @@ p1 {
 
 /* Skills section */
 #skills {
-
+  padding-top: 25px;
 }
 
 .skills-container {
@@ -414,7 +414,6 @@ p1 {
 }
 /* Portfolio Section */
 #portfolio {
-  margin-top: 20px;
 }
 
 .portfolio-container {
