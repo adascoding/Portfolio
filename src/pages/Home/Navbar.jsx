@@ -19,21 +19,12 @@ export default function Navbar() {
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    console.log("Scroll Position:", scrollPosition);
 
     const heroSection = document.getElementById("hero").offsetTop;
     const aboutSection = document.getElementById("about").offsetTop;
     const skillsSection = document.getElementById("skills").offsetTop;
     const portfolioSection = document.getElementById("portfolio").offsetTop;
     const contactSection = document.getElementById("contact").offsetTop;
-
-    console.log("Section Positions:", {
-      heroSection,
-      aboutSection,
-      skillsSection,
-      portfolioSection,
-      contactSection
-    });
 
     if (scrollPosition >= heroSection && scrollPosition < aboutSection - 70) {
       setActiveSection("hero");
@@ -93,70 +84,70 @@ export default function Navbar() {
           <ul>
             <li>
               <ScrollLink
-                onClick={closeMenu}
                 to="hero"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
                 activeClass="active-link"
-                onSetActive={() => handleSetActive("hero")}
+                onSetActive={handleSetActive}
+                onClick={() => { handleSetActive("hero"); closeMenu(); }}
               >
                 Home
               </ScrollLink>
             </li>
             <li>
               <ScrollLink
-                onClick={closeMenu}
                 to="about"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
                 activeClass="active-link"
-                onSetActive={() => handleSetActive("about")}
+                onSetActive={handleSetActive}
+                onClick={() => { handleSetActive("about"); closeMenu(); }}
               >
                 About
               </ScrollLink>
             </li>
             <li>
               <ScrollLink
-                onClick={closeMenu}
                 to="skills"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
                 activeClass="active-link"
-                onSetActive={() => handleSetActive("skills")}
+                onSetActive={handleSetActive}
+                onClick={() => { handleSetActive("skills"); closeMenu(); }}
               >
                 Skills
               </ScrollLink>
             </li>
             <li>
               <ScrollLink
-                onClick={closeMenu}
                 to="portfolio"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
                 activeClass="active-link"
-                onSetActive={() => handleSetActive("portfolio")}
+                onSetActive={handleSetActive}
+                onClick={() => { handleSetActive("portfolio"); closeMenu(); }}
               >
                 Portfolio
               </ScrollLink>
             </li>
             <li>
               <ScrollLink
-                onClick={closeMenu}
                 to="contact"
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
                 activeClass="active-link"
-                onSetActive={() => handleSetActive("contact")}
+                onSetActive={handleSetActive}
+                onClick={() => { handleSetActive("contact"); closeMenu(); }}
               >
                 Contact
               </ScrollLink>
