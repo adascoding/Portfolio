@@ -5,7 +5,7 @@ import { faDesktop, faServer, faTools, faCode } from '@fortawesome/free-solid-sv
 export default function MySkills() {
     return (
         <section id="skills">
-            <span className="section-sub-heading">Technological Expertise and Tools</span><br/>
+            <span className="section-sub-heading">Technological Expertise and Tools</span><br />
             <span className="section-heading">My Skills</span>
             <div className="skills-container">
                 <div className="skills-card">
@@ -17,8 +17,10 @@ export default function MySkills() {
                             <li><strong>React.js:</strong> Developed dynamic and responsive user interfaces for web applications.</li>
                             <li><strong>React Router:</strong> Implemented seamless navigation between pages in React applications.</li>
                             <li><strong>Tailwind CSS, styled-components, MaterialUI:</strong> Utilized modern CSS frameworks and libraries for styling and UI design.</li>
+                            <li><strong>Modern CSS (Flexbox & Grid):</strong> Applied Flexbox and Grid layout techniques to create responsive and adaptable layouts.</li>
                         </ul>
                     </div>
+
                 </div>
                 <div className="skills-card">
                     <div className="skills-title">
@@ -29,8 +31,11 @@ export default function MySkills() {
                             <li><strong>C# (.NET Core):</strong> Built robust back-end services for web applications.</li>
                             <li><strong>Entity Framework Core:</strong> Managed database operations efficiently in .NET Core applications.</li>
                             <li><strong>JWT Authentication:</strong> Implemented secure user authentication for applications.</li>
+                            <li><strong>Repository Pattern:</strong> Applied the Repository Pattern to create an abstraction layer for data access, improving code maintainability and testability.</li>
+                            <li><strong>Test-Driven Development (TDD):</strong> Practiced TDD to ensure code reliability and maintainability through rigorous automated testing.</li>
                         </ul>
                     </div>
+
                 </div>
                 <div className="skills-card">
                     <div className="skills-title">

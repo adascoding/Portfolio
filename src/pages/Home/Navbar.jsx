@@ -100,7 +100,7 @@ export default function Navbar() {
                 to="hero"
                 spy={true}
                 smooth={true}
-                offset={-70} // Adjust offset as needed
+                offset={-70}
                 duration={500}
                 activeClass="active-link"
                 onSetActive={() => handleSetActive("hero")}
@@ -119,7 +119,7 @@ export default function Navbar() {
                 activeClass="active-link"
                 onSetActive={() => handleSetActive("about")}
               >
-                About Me
+                About
               </ScrollLink>
             </li>
             <li>
@@ -133,7 +133,7 @@ export default function Navbar() {
                 activeClass="active-link"
                 onSetActive={() => handleSetActive("skills")}
               >
-                My Skills
+                Skills
               </ScrollLink>
             </li>
             <li>
@@ -161,7 +161,7 @@ export default function Navbar() {
                 activeClass="active-link"
                 onSetActive={() => handleSetActive("contact")}
               >
-                Contact Me
+                Contact
               </ScrollLink>
             </li>
           </ul>
