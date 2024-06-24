@@ -73,11 +73,6 @@ export default function ContactMe() {
             Submit
           </button>
         </form>
-
-        <p className="contact-disclaimer">
-          Please note that by submitting this form, you consent to us processing
-          your information in accordance with our privacy policy.
-        </p>
       </div>
     </section>
   );
