@@ -8,7 +8,7 @@ export default function AboutMe() {
                     <span className="section-sub-heading">A Brief Introduction</span><br />
                     <span className="section-heading">About Me</span>
                     <p>
-                        Hello! I’m Adas, a Junior Software Developer based in Ballymena, Northern Ireland. I graduated with a Professional Bachelor’s Degree in Software Systems from Kauno kolegija, Lithuania. I have hands-on experience from a junior .NET Developer internship I worked with C#, React.js, .NET Core, and SQL Server, focusing on both front-end and back-end development in an Agile Scrum environment. I am passionate about continuous learning, solving complex problems, and contributing to impactful projects while enjoying hobbies like cycling, cooking, and movies.
+                        Hello! I’m Adas, a Junior Software Developer based in Ballymena, Northern Ireland. I graduated with a Professional Bachelor’s Degree in Software Systems from Kauno kolegija – Higher Education Institution, Lithuania. I have hands-on experience from a junior .NET Developer internship I worked with C#, React.js, .NET Core, and SQL Server, focusing on both front-end and back-end development in an Agile Scrum environment. I am passionate about continuous learning, solving complex problems, and contributing to impactful projects while enjoying hobbies like cycling, cooking, and movies.
                     </p>
                     <span className="section-heading">Education</span>
                     <p>
