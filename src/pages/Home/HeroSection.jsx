@@ -27,7 +27,7 @@ export default function HeroSection() {
                             Contact me
                         </ScrollLink>
                         <a href="../Adas-CV.pdf" className="cv-download" download>
-                            <FontAwesomeIcon icon={faDownload} /> Download CV
+                            <FontAwesomeIcon className="download-icon" icon={faDownload} /> Download CV
                         </a>
                     </div>
                 </div>

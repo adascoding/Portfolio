@@ -69,13 +69,10 @@ section {
 }
 
 @media (max-width: 500px) {
-  .button-container {
-    flex-direction: column;
+  .download-icon {
+    display: none;
   }
 
-  .cv-download {
-    margin-left: 0;
-  }
 }
 
 .hero-button {
