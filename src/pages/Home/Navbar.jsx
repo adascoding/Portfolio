@@ -3,7 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 export default function Navbar() {
   const [navActive, setNavActive] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero"); // Default to "hero"
+  const [activeSection, setActiveSection] = useState("hero");
 
   const toggleNav = () => {
     setNavActive((prev) => !prev);
@@ -15,7 +15,7 @@ export default function Navbar() {
 
   const handleSetActive = (section) => {
     setActiveSection(section);
-    closeMenu(); // Close the menu on setting active section
+    closeMenu();
   };
 
   useEffect(() => {
