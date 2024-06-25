@@ -6,7 +6,6 @@ export default function HeroSection() {
     return (
         <section id="hero" className="hero-section">
             <div className="hero-content">
-
                 <div className="hero-text">
                     <p className="hero-greeting">Hey, I'm Adas</p>
                     <h1 className="hero-title">Junior Software <span style={{ color: '#282938' }}>Developer</span></h1>
@@ -31,7 +30,6 @@ export default function HeroSection() {
                             <FontAwesomeIcon icon={faDownload} /> Download CV
                         </a>
                     </div>
-
                 </div>
                 <div className="hero-image">
                     <img src="./img/hero_img.jpg" alt="Adas" />
