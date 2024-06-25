@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link as ScrollLink, Events } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Navbar() {
   const [navActive, setNavActive] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("hero"); // Default to "hero"
 
   const toggleNav = () => {
     setNavActive((prev) => !prev);
@@ -13,30 +13,9 @@ export default function Navbar() {
     setNavActive(false);
   };
 
-  const handleSetActive = (to) => {
-    setActiveSection(to);
-  };
-
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-
-    const heroSection = document.getElementById("hero").offsetTop;
-    const aboutSection = document.getElementById("about").offsetTop;
-    const skillsSection = document.getElementById("skills").offsetTop;
-    const portfolioSection = document.getElementById("portfolio").offsetTop;
-    const contactSection = document.getElementById("contact").offsetTop;
-
-    if (scrollPosition >= heroSection && scrollPosition < aboutSection - 70) {
-      setActiveSection("hero");
-    } else if (scrollPosition >= aboutSection - 70 && scrollPosition < skillsSection - 70) {
-      setActiveSection("about");
-    } else if (scrollPosition >= skillsSection - 70 && scrollPosition < portfolioSection - 70) {
-      setActiveSection("skills");
-    } else if (scrollPosition >= portfolioSection - 70 && scrollPosition < contactSection - 70) {
-      setActiveSection("portfolio");
-    } else if (scrollPosition >= contactSection - 70) {
-      setActiveSection("contact");
-    }
+  const handleSetActive = (section) => {
+    setActiveSection(section);
+    closeMenu(); // Close the menu on setting active section
   };
 
   useEffect(() => {
@@ -56,16 +35,6 @@ export default function Navbar() {
     if (window.innerWidth <= 1200) {
       closeMenu();
     }
-
-    window.addEventListener("scroll", handleScroll);
-    Events.scrollEvent.register("begin", () => {});
-    Events.scrollEvent.register("end", () => {});
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      Events.scrollEvent.remove("begin");
-      Events.scrollEvent.remove("end");
-    };
   }, []);
 
   return (
@@ -85,13 +54,11 @@ export default function Navbar() {
             <li>
               <ScrollLink
                 to="hero"
-                spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
-                activeClass="active-link"
-                onSetActive={handleSetActive}
-                onClick={() => { handleSetActive("hero"); closeMenu(); }}
+                onClick={() => handleSetActive("hero")}
+                className={activeSection === "hero" ? "active-link" : ""}
               >
                 Home
               </ScrollLink>
@@ -99,13 +66,11 @@ export default function Navbar() {
             <li>
               <ScrollLink
                 to="about"
-                spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
-                activeClass="active-link"
-                onSetActive={handleSetActive}
-                onClick={() => { handleSetActive("about"); closeMenu(); }}
+                onClick={() => handleSetActive("about")}
+                className={activeSection === "about" ? "active-link" : ""}
               >
                 About
               </ScrollLink>
@@ -113,13 +78,11 @@ export default function Navbar() {
             <li>
               <ScrollLink
                 to="skills"
-                spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
-                activeClass="active-link"
-                onSetActive={handleSetActive}
-                onClick={() => { handleSetActive("skills"); closeMenu(); }}
+                onClick={() => handleSetActive("skills")}
+                className={activeSection === "skills" ? "active-link" : ""}
               >
                 Skills
               </ScrollLink>
@@ -127,13 +90,11 @@ export default function Navbar() {
             <li>
               <ScrollLink
                 to="portfolio"
-                spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
-                activeClass="active-link"
-                onSetActive={handleSetActive}
-                onClick={() => { handleSetActive("portfolio"); closeMenu(); }}
+                onClick={() => handleSetActive("portfolio")}
+                className={activeSection === "portfolio" ? "active-link" : ""}
               >
                 Portfolio
               </ScrollLink>
@@ -141,13 +102,11 @@ export default function Navbar() {
             <li>
               <ScrollLink
                 to="contact"
-                spy={true}
                 smooth={true}
                 offset={-70}
                 duration={500}
-                activeClass="active-link"
-                onSetActive={handleSetActive}
-                onClick={() => { handleSetActive("contact"); closeMenu(); }}
+                onClick={() => handleSetActive("contact")}
+                className={activeSection === "contact" ? "active-link" : ""}
               >
                 Contact
               </ScrollLink>
