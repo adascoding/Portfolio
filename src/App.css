@@ -67,6 +67,9 @@ section {
   .button-container {
     flex-direction: column;
   }
+  .cv-download {
+    margin-left: 0;
+  }
   }
 .hero-button {
   background-color: #5e3bee;
