@@ -59,6 +59,15 @@ section {
   color: #282938;
 }
 
+.button-container {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 365px) {
+  .button-container {
+    flex-direction: column;
+  }
+  }
 .hero-button {
   background-color: #5e3bee;
   border: 1px solid #5e3bee;
